@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable name="data"
+                  type="com.example.khanhhuy.myapplication.viewmodel.ArticleViewModel"/>
+    </data>
+    <LinearLayout
+        android:id="@+id/linear_main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/custom_border"
+        >
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@{data.getTitle()}"
+            />
+        <TextView
+            android:id="@+id/text_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:textColor="@android:color/darker_gray"
+            android:text="@{data.getSubtitle()}"
+            />
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:text="@{data.getFormattedDate()}"
+            />
+
+        <TextView
+            android:id="@+id/text_excerpt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="14sp"
+            android:text="@{data.getExcerpt()}"
+            />
+
+    </LinearLayout>
+</layout>
